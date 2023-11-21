@@ -34,10 +34,10 @@ void selection_sort(int *array, size_t size)
 		/*checking the smallest number between the group*/
 		for (j = i + 1; j < size; j++)
 		{
-			if (array[j] > array[min_index])
+			if (array[j] < array[min_index])
 				min_index = j;
-			swap(&array[j], &array[min_index]);
-			print_array(array, size);
 		}
+		swap(&array[j], &array[min_index]);
+		print_array(array, size);
 	}
 }
